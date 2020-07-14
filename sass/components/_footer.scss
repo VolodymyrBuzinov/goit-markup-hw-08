@@ -1,0 +1,74 @@
+.footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  & h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $text-color;
+    margin-bottom: 50px;
+  }
+}
+.footer__clients {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 94px;
+}
+.footer__company {
+  min-width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  text-align: center;
+  fill: #afb1b8;
+  transition: $animation-duration;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: $main-color;
+    border: 1px solid $main-color;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.yaco-icon {
+  max-width: 44px;
+  max-height: 49px;
+}
+.tagline-icon {
+  max-width: 40px;
+  max-height: 52px;
+}
+.company-icon {
+  max-width: 41px;
+  max-height: 43px;
+}
+.foster-icon {
+  max-width: 80px;
+  max-height: 42px;
+}
+.brand-icon {
+  max-width: 59px;
+  max-height: 47px;
+}
+.taco-icon {
+  max-width: 89px;
+  max-height: 45px;
+}

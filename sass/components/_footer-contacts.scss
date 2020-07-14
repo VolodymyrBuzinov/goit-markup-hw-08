@@ -1,0 +1,195 @@
+.footer__contacts {
+  min-height: 253px;
+  background-color: #2f303a;
+}
+.footer__navigation {
+  width: 1200px;
+  padding-bottom: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+.footer__adress {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-link-color;
+  list-style: none;
+}
+.footer__web__studio {
+  display: block;
+  margin-bottom: 9px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $text-link-color;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  & span {
+    color: $main-color;
+  }
+}
+.footer__tel,
+#mail {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+#mail {
+  display: block;
+  margin-bottom: 9px;
+  margin-top: 9px;
+}
+.footer__social {
+  & p {
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $text-link-color;
+  }
+}
+.social__list {
+  display: flex;
+  & div {
+    margin-right: 10px;
+  }
+  & div:last-child {
+    margin-right: 0;
+  }
+}
+.footer__instagram a {
+  @extend %footer-link;
+  &:hover,
+  &:focus {
+    border-radius: 50px;
+    background-color: $main-color;
+  }
+}
+.footer__instagram__inner {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.footer__twitter a {
+  @extend %footer-link;
+  &:hover,
+  &:focus {
+    border-radius: 50px;
+    background-color: $main-color;
+  }
+}
+.footer__twitter__inner {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.footer__facebook a {
+  @extend %footer-link;
+  &:hover,
+  &:focus {
+    border-radius: 50px;
+    background-color: $main-color;
+  }
+}
+.footer__facebook__inner {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.footer__IN a {
+  @extend %footer-link;
+  &:hover,
+  &:focus {
+    border-radius: 50px;
+    background-color: $main-color;
+  }
+}
+.footer__IN__inner {
+  max-width: 20px;
+  max-height: 20px;
+}
+.footer__form {
+  display: flex;
+  align-items: center;
+  & p {
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $text-link-color;
+  }
+}
+.input__text {
+  margin-right: 12px;
+  display: flex;
+}
+.footer__input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  background-color: #2f303a;
+  font-weight: normal;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: $animation-duration;
+  &:focus {
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+}
+.submmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  margin-left: 10px;
+  padding: 0;
+  min-width: 200px;
+  min-height: 50px;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 2px solid $main-color;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $text-link-color;
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/social/iconsend.svg");
+    margin-left: 10px;
+  }
+}

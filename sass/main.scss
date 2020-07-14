@@ -1,0 +1,50 @@
+@import "./utils/variables";
+@import "./components/header";
+@import "./components/header-hero";
+@import "./components/advantages";
+@import "./components/whatwedo";
+@import "./components/team";
+@import "./components/footer";
+@import "./components/footer-contacts";
+@import "./components/backdrop";
+@import "./components/portfolio";
+*,
+*::before,
+*::after {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+%team-link {
+  width: 44px;
+  height: 44px;
+  background-color: $text-link-color;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  transition: $animation-duration;
+}
+%footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: $animation-duration;
+}
+%main-logo {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}

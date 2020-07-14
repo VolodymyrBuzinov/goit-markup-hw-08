@@ -1,0 +1,79 @@
+.main {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.main__advantages {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 94px;
+  & h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+  & p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--little-text-color);
+  }
+}
+.main__list {
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.main__details {
+  width: calc(100% - 90px / 4);
+  text-align: left;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+.details__logo {
+  @extend %main-logo;
+  &__inner {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+}
+.punctuality__logo {
+  @extend %main-logo;
+  &__inner {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+}
+.plan__logo {
+  @extend %main-logo;
+  &__inner {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+}
+.tech__logo {
+  @extend %main-logo;
+  &__inner {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+}

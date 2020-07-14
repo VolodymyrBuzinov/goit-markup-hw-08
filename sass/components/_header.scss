@@ -1,0 +1,110 @@
+.header {
+  &-navigation {
+    display: flex;
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+}
+
+.navigation-web-studio {
+  margin-right: 85px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $text-color;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  & span {
+    color: $main-color;
+  }
+}
+.navigation-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  & .navigation-list__pages + .navigation-list__pages {
+    margin-left: 50px;
+  }
+}
+.navigation-list__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $text-color;
+  text-decoration: none;
+  transition: $animation-duration;
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $main-color;
+    border-radius: 2px;
+    opacity: 0;
+    transform: scalex(0);
+    transition: $animation-duration;
+  }
+  &:hover::before {
+    opacity: 1;
+    transform: scalex(1);
+  }
+}
+.navigation-contacts {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  & .contact-us + .contact-us {
+    margin-left: 30px;
+  }
+  .contact-us a:hover,
+  .contact-us a:focus {
+    color: $main-color;
+    fill: $main-color;
+  }
+}
+.nav__tel,
+.nav__mail {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $little-text-color;
+  text-decoration: none;
+  transition: $animation-duration;
+  fill: #757575;
+}
+.mail__icon {
+  width: 16px;
+  height: 11.2px;
+  margin-right: 10px;
+}
+.smart__icon {
+  width: 10px;
+  height: 14.94px;
+  margin-right: 10px;
+}
