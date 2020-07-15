@@ -1,21 +1,43 @@
 .main-content {
   position: relative;
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("../../img/1st/Header-img.jpg");
-  background-repeat: no-repeat;
   text-align: center;
   background-color: #fff;
   z-index: 10;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 479px) {
+    max-width: 480px;
+    background-image: url("../../img/hero-img/optimized/Header-480-min.jpg");
+  }
+  @media screen and (min-width: 480px) {
+    background-image: url("../../img/hero-img/optimized/Header-768-min.jpg");
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 1600px;
+    background-image: url("../../img/hero-img/optimized/Header-1200-min.jpg");
+  }
+  @media screen and (max-width: 1200px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url("../../img/1st/Header-img.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
   &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100%;
     background: rgb(2, 0, 36);
     background: linear-gradient(
       180deg,
@@ -24,20 +46,6 @@
       rgba(64, 56, 56, 0.8) 100%
     );
     z-index: 1;
-  }
-  &__title {
-    position: inherit;
-    margin-top: 0;
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $text-link-color;
-    padding-top: 200px;
-    z-index: 11;
   }
   &__button {
     display: inline-block;
@@ -56,5 +64,22 @@
     color: $text-link-color;
     text-decoration: none;
     z-index: 12;
+  }
+}
+.main-content__title {
+  position: inherit;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $text-link-color;
+  z-index: 11;
+  @media screen and (max-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.61;
   }
 }

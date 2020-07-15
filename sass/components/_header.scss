@@ -1,11 +1,33 @@
 .header {
-  &-navigation {
+  position: relative;
+  overflow: hidden;
+}
+.header-navigation {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (max-width: 767px) {
     display: flex;
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    position: relative;
+    width: 768px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    min-width: 1200px;
+    display: flex;
     align-items: center;
   }
 }
@@ -23,21 +45,97 @@
     color: $main-color;
   }
 }
+.burger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #fff;
+  z-index: 201;
+  &:hover .burger__menu {
+    fill: $main-color;
+  }
+  &.is-open .burger__menu {
+    transform: translateX(100%);
+  }
+  & .burger__close {
+    transition: $animation-duration;
+    transform: translateX(100%);
+  }
+  &.is-open .burger__close {
+    transform: translateX(0);
+  }
+  &:hover .burger__close {
+    fill: $main-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.burger__menu {
+  transition: $animation-duration;
+}
+
+.navigation-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border-top: 2px solid #ececec;
+    z-index: 200;
+    transform: translatex(100%);
+    transition: transform $animation-duration;
+    &.is-open {
+      transform: translatex(0);
+      transition: transform $animation-duration;
+    }
+  }
+}
+
 .navigation-list {
   list-style: none;
   margin-top: 0;
-  margin-bottom: 0;
   padding: 0;
-  display: flex;
-  & .navigation-list__pages + .navigation-list__pages {
-    margin-left: 50px;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    & .navigation-list__pages + .navigation-list__pages {
+      margin-top: 50px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    & .navigation-list__pages + .navigation-list__pages {
+      margin-left: 50px;
+    }
   }
 }
 .navigation-list__link {
   position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -45,6 +143,14 @@
   color: $text-color;
   text-decoration: none;
   transition: $animation-duration;
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   &:hover,
   &:focus {
     color: $main-color;
@@ -71,11 +177,19 @@
   margin-bottom: 0;
   list-style: none;
   padding: 0;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  & .contact-us + .contact-us {
-    margin-left: 30px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .contact-us + .contact-us {
+      margin-left: 30px;
+    }
   }
   .contact-us a:hover,
   .contact-us a:focus {
@@ -87,8 +201,6 @@
 .nav__mail {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -97,6 +209,14 @@
   text-decoration: none;
   transition: $animation-duration;
   fill: #757575;
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 .mail__icon {
   width: 16px;

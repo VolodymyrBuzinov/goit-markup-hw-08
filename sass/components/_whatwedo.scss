@@ -1,4 +1,5 @@
 .wedo {
+  display: none;
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
@@ -21,6 +22,9 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
   }
 }
 .wedo__desktop {

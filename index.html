@@ -21,43 +21,58 @@
         <a class="navigation-web-studio" href="./index.html"
           ><span>Web</span> Studio</a
         >
-        <ul class="navigation-list">
-          <li class="navigation-list__pages">
-            <a class="navigation-list__link" href="./index.html">Студия</a>
-          </li>
-          <li class="navigation-list__pages">
-            <a class="navigation-list__link" href="./portfolio.html"
-              >Портфолио</a
-            >
-          </li>
-          <li class="navigation-list__pages">
-            <a class="navigation-list__link" href="#mail">Контакты</a>
-          </li>
-          <li></li>
-        </ul>
+        <button class="burger-button" data-menu-button type="button">
+          <svg aria-label="Переключатель мобильного меню" class="burger__icon">
+            <use
+              class="burger__menu"
+              href="./img/icons-optimized/symbol-defs.svg#icon-menu_40-2px"
+            ></use>
+            <use
+              class="burger__close"
+              href="./img/icons-optimized/symbol-defs.svg#icon-close_40px"
+            ></use>
+          </svg>
+        </button>
 
-        <ul class="navigation-contacts">
-          <li class="contact-us">
-            <a class="nav__mail" href="mailto:info@devstudio.com">
-              <svg class="mail__icon">
-                <use
-                  href="./img/icons-optimized/symbol-defs.svg#icon-envelope"
-                ></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-us">
-            <a class="nav__tel" href="tel:+380961111111">
-              <svg class="smart__icon">
-                <use
-                  href="./img/icons-optimized/symbol-defs.svg#icon-smartphone"
-                ></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="navigation-container" data-menu>
+          <ul class="navigation-list">
+            <li class="navigation-list__pages">
+              <a class="navigation-list__link" href="./index.html">Студия</a>
+            </li>
+            <li class="navigation-list__pages">
+              <a class="navigation-list__link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="navigation-list__pages">
+              <a class="navigation-list__link" href="#mail">Контакты</a>
+            </li>
+            <li></li>
+          </ul>
+
+          <ul class="navigation-contacts">
+            <li class="contact-us">
+              <a class="nav__mail" href="mailto:info@devstudio.com">
+                <svg class="mail__icon">
+                  <use
+                    href="./img/icons-optimized/symbol-defs.svg#icon-envelope"
+                  ></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-us">
+              <a class="nav__tel" href="tel:+380961111111">
+                <svg class="smart__icon">
+                  <use
+                    href="./img/icons-optimized/symbol-defs.svg#icon-smartphone"
+                  ></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="main-content">
         <h1 class="main-content__title">
@@ -131,7 +146,6 @@
           </li>
         </ul>
       </section>
-      <!-- WHAT WE DO -->
 
       <section class="wedo">
         <h2 class="wedo__title">Чем мы занимаемся</h2>
@@ -175,6 +189,7 @@
             src="./img/1st/nikolay.jpg"
             alt="Николай Кучеренко"
             width="292"
+            srcset="./img/team-480/optimized/nikolay-480@2x-min.jpg 480w"
           />
           <h3>Николай Кучеренко</h3>
           <p>Product Designer</p>
@@ -350,7 +365,7 @@
     </section>
     <!-- END OUR TEAM -->
     <!-- FOOTER -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <h3>Постоянные клиенты</h3>
       <div class="footer__clients">
         <div class="footer__company">
@@ -468,9 +483,7 @@
                 </a>
               </div>
             </div>
-          </div>
-
-          <!-- <div class="footer-checkbox"> -->
+          </div>          
           <form class="footer__form">
             <div class="input__text">
               <div class="form">
@@ -485,14 +498,13 @@
               </div>
               <button class="submmit">Подписаться</button>
             </div>
-          </form>
-          <!-- </div> -->
+          </form>          
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- END FOOTER -->
     <!-- MODAL WINDOW -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal__form" action="/">
           <button class="close__button" data-modal-close>
@@ -584,7 +596,8 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./modal.js"></script>
+    <script src="./menu.js"></script>
   </body>
 </html>
