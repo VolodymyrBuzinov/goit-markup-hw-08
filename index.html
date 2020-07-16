@@ -186,10 +186,13 @@
       <div class="team__container">
         <div class="team__card">
           <img
-            src="./img/1st/nikolay.jpg"
+            src="./img/nikolay-1200.jpg"
             alt="Николай Кучеренко"
-            width="292"
-            srcset="./img/team-480/optimized/nikolay-480@2x-min.jpg 480w"
+            srcset="
+              ./img/nikolay-1200.jpg    1x,
+              ./img/nikolay-1200@2x.jpg 2x,
+              ./img/nikolay-1200@3x.jpg 3x
+            "
           />
           <h3>Николай Кучеренко</h3>
           <p>Product Designer</p>
@@ -233,7 +236,7 @@
           </ul>
         </div>
         <div class="team__card">
-          <img src="./img/1st/olga.jpg" alt="Ольга Иванова" width="292" />
+          <img src="./img/1st/olga.jpg" alt="Ольга Иванова" />
           <h3>Ольга Иванова</h3>
           <p>Frontend Developer</p>
           <ul class="team__social">
@@ -365,7 +368,7 @@
     </section>
     <!-- END OUR TEAM -->
     <!-- FOOTER -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <h3>Постоянные клиенты</h3>
       <div class="footer__clients">
         <div class="footer__company">
@@ -483,7 +486,7 @@
                 </a>
               </div>
             </div>
-          </div>          
+          </div>
           <form class="footer__form">
             <div class="input__text">
               <div class="form">
@@ -498,13 +501,13 @@
               </div>
               <button class="submmit">Подписаться</button>
             </div>
-          </form>          
+          </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- END FOOTER -->
     <!-- MODAL WINDOW -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal__form" action="/">
           <button class="close__button" data-modal-close>
@@ -596,7 +599,7 @@
           </div>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./modal.js"></script>
     <script src="./menu.js"></script>
   </body>

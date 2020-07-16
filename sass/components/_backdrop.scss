@@ -8,17 +8,19 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  z-index: 201;
   transition: $animation-duration;
 }
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
   padding: 40px;
   background-color: #fff;
-  &__form {
-    width: 448px;
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+    min-height: 581px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
   }
 }
 .close__button {
@@ -196,23 +198,41 @@
 }
 .checkbox__icon {
   position: absolute;
-  top: 50%;
-  left: 0;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
   border-radius: 3px;
-  transform: translateY(-50%);
+
   fill: #ffffff;
   .agree__checkbox:checked + & {
     background-origin: border-box;
     border-color: $main-color;
     background-color: $main-color;
   }
+  @media screen and (max-width: 479px) {
+    top: 10%;
+    left: -17px;
+  }
+  @media screen and (min-width: 480px) {
+    top: 50%;
+    left: -17px;
+    transform: translateY(-50%);
+  }
+  @media screen and (min-width: 520px) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  @media screen and (min-width: 768px) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
 }
 .is-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  opacity: 0;
+  // clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
