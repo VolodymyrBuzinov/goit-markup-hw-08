@@ -100,12 +100,17 @@
       0px 1px 1px rgba(0, 0, 0, 0.12);
   }
   @media screen and (max-width: 479px) {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
   @media screen and (min-width: 480px) {
-    max-width: 450px;
+    width: 354px;
+    margin-left: auto;
+    margin-right: auto;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
