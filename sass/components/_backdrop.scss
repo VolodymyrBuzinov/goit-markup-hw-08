@@ -12,15 +12,30 @@
   transition: $animation-duration;
 }
 .modal {
+  // width: 95vw;
   position: absolute;
   padding: 40px;
   background-color: #fff;
-  @media screen and (min-width: 480px) {
-    min-width: 450px;
-    min-height: 581px;
+  @media screen and (max-width: 479px) {
+    padding: 30px;
+    width: 95vw;
+    max-height: 95vh;
+    overflow-y: scroll;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 480px) {
+    overflow-y: scroll;
+    width: 95vw;
+    max-height: 98vh;
+  }
+  @media screen and (min-width: 560px) {
+    width: 90vw;
+  }
+  @media screen and (min-width: 768px) {
+    width: 70vw;
+  }
+  @media screen and (min-width: 860px) {
     width: 528px;
+    overflow-y: unset;
   }
 }
 .close__button {
@@ -54,6 +69,9 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
 }
 .modal__list {
   margin: 0;
@@ -61,6 +79,9 @@
   list-style: none;
   & li {
     margin-bottom: 28px;
+    @media screen and (max-width: 479px) {
+      margin-bottom: 10px;
+    }
   }
 }
 .modal__label {
@@ -130,6 +151,9 @@
   width: 100%;
   position: relative;
   margin-bottom: 20px;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
 }
 .modal__textarea {
   width: 100%;
@@ -180,17 +204,19 @@
 }
 .agree__container {
   width: 100%;
-  text-align: center;
   position: relative;
   margin-bottom: 30px;
+  text-align: center;
 }
 .agree__label {
+  position: relative;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+
   & a {
     text-decoration: underline;
     color: $main-color;
@@ -198,6 +224,8 @@
 }
 .checkbox__icon {
   position: absolute;
+  left: -20px;
+  transform: translateY(-50%);
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -209,24 +237,14 @@
     border-color: $main-color;
     background-color: $main-color;
   }
-  @media screen and (max-width: 479px) {
-    top: 10%;
-    left: -17px;
+  @media screen and (max-width: 505px) {
+    top: 20%;
   }
-  @media screen and (min-width: 480px) {
-    top: 50%;
-    left: -17px;
-    transform: translateY(-50%);
+  @media screen and (min-width: 506px) {
+    top: 42%;
   }
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 564px) {
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  @media screen and (min-width: 768px) {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
   }
 }
 .is-hidden {

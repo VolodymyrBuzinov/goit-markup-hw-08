@@ -1,6 +1,6 @@
 .header {
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .header-navigation {
@@ -50,7 +50,7 @@
 @media screen and (min-width: 1200px) {
   .header-navigation {
     position: relative;
-    min-width: 1200px;
+    width: 1200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -152,7 +152,7 @@
 @media screen and (max-width: 767px) {
   .navigation-container {
     position: absolute;
-    top: 15%;
+    top: 14%;
     left: 0;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1477,16 +1477,39 @@
   background-color: #fff;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 479px) {
   .modal {
-    min-width: 450px;
-    min-height: 581px;
+    padding: 30px;
+    width: 95vw;
+    max-height: 95vh;
+    overflow-y: scroll;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
+  .modal {
+    overflow-y: scroll;
+    width: 95vw;
+    max-height: 98vh;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .modal {
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 70vw;
+  }
+}
+
+@media screen and (min-width: 860px) {
   .modal {
     width: 528px;
+    overflow-y: unset;
   }
 }
 
@@ -1533,6 +1556,12 @@
   color: #212121;
 }
 
+@media screen and (max-width: 479px) {
+  .modal__desc {
+    margin-bottom: 10px;
+  }
+}
+
 .modal__list {
   margin: 0;
   padding: 0;
@@ -1541,6 +1570,12 @@
 
 .modal__list li {
   margin-bottom: 28px;
+}
+
+@media screen and (max-width: 479px) {
+  .modal__list li {
+    margin-bottom: 10px;
+  }
 }
 
 .modal__label {
@@ -1644,6 +1679,12 @@
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 479px) {
+  .textarea__container {
+    margin-bottom: 10px;
+  }
+}
+
 .modal__textarea {
   width: 100%;
   display: inline-block;
@@ -1723,12 +1764,13 @@
 
 .agree__container {
   width: 100%;
-  text-align: center;
   position: relative;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .agree__label {
+  position: relative;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1744,6 +1786,9 @@
 
 .checkbox__icon {
   position: absolute;
+  left: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -1757,37 +1802,21 @@
   background-color: #2196f3;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 505px) {
   .checkbox__icon {
-    top: 10%;
-    left: -17px;
+    top: 20%;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 506px) {
   .checkbox__icon {
-    top: 50%;
-    left: -17px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    top: 42%;
   }
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 564px) {
   .checkbox__icon {
     top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .checkbox__icon {
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
   }
 }
 
@@ -1851,10 +1880,45 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   list-style: none;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 479px) {
+  .main-buttons {
+    margin-top: 0;
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .main-buttons {
+    width: 480px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-buttons {
+    width: 768px;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    margin-bottom: 56px;
+  }
 }
 
 .buttons-main {
+  display: block;
   margin-right: 8px;
   text-decoration: none;
   background: #f5f4fa;
@@ -1880,40 +1944,107 @@
   color: #ffffff;
 }
 
+@media screen and (max-width: 479px) {
+  .buttons-main {
+    padding: 6px 10px 6px 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buttons-main {
+    margin: 7px;
+  }
+}
+
 .projects-row {
-  width: 1200px;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 114px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   list-style: none;
 }
 
+@media screen and (min-width: 480px) {
+  .projects-row {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-row {
+    width: 1200px;
+    padding-bottom: 114px;
+  }
+}
+
 .projects-card {
-  max-width: 370px;
   background: #ffffff;
   border: 1px solid #eeeeee;
-}
-
-.projects-card:not(:nth-child(n + 7)) {
-  margin-bottom: 30px;
-}
-
-.projects-card:not(:nth-child(3n)) {
-  margin-right: 30px;
 }
 
 .projects-card:hover, .projects-card:focus {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 479px) {
+  .projects-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .projects-card {
+    max-width: 450px;
+  }
+  .projects-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 354px;
+  }
+  .projects-card:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-card {
+    max-width: 370px;
+  }
+  .projects-card:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .projects-card:nth-child(odd) {
+    margin-right: 0;
+  }
+  .projects-card:not(:nth-child(n + 7)) {
+    margin-bottom: 30px;
+  }
+  .projects-card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
 }
 
 .projects-link {

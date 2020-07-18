@@ -20,9 +20,28 @@
 .main-buttons {
   display: inline-flex;
   list-style: none;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  padding-left: 0;
+  @media screen and (max-width: 479px) {
+    margin-top: 0;
+    padding-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    flex-wrap: no-wrap;
+    margin-bottom: 56px;
+  }
 }
 .buttons-main {
+  display: block;
   margin-right: 8px;
   text-decoration: none;
   background: #f5f4fa;
@@ -44,34 +63,75 @@
     background: $main-color;
     color: $text-link-color;
   }
+  @media screen and (max-width: 479px) {
+    padding: 6px 10px 6px 10px;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 7px;
+  }
 }
 .projects-row {
-  width: 1200px;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 114px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-bottom: 114px;
+  }
 }
 .projects-card {
-  max-width: 370px;
   background: $text-link-color;
   border: 1px solid #eeeeee;
-  &:not(:nth-child(n + 7)) {
-    margin-bottom: 30px;
-  }
-  &:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
   &:hover,
   &:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 354px;
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+    &:not(:nth-child(n + 7)) {
+      margin-bottom: 30px;
+    }
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
   }
 }
 .projects-link {
