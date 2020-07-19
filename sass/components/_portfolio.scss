@@ -162,6 +162,9 @@
   opacity: 0.9;
   transform: translatey(0);
   transition: transform $animation-duration;
+  @media screen and (max-width: 479px) {
+    padding: 23px 14px;
+  }
   .projects-card:hover & {
     transform: translatey(-101%);
   }
