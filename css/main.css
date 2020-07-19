@@ -111,6 +111,7 @@
 }
 
 .burger-button:hover .burger__close {
+  overflow-x: hidden;
   fill: #2196f3;
 }
 
