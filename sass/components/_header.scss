@@ -1,5 +1,4 @@
 .header {
-  overflow: hidden;
   position: relative;
 }
 .header-navigation {
@@ -92,7 +91,7 @@
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 14%;
-    left: 0;
+    left: -9999999px;
     padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
@@ -106,12 +105,16 @@
     transform: translatex(100%);
     transition: transform $animation-duration;
     &.is-open {
+      left: 0;
       transform: translatex(0);
       transition: transform $animation-duration;
     }
   }
 }
-
+.cont-port {
+  top: 100%;
+  border-top: hidden;
+}
 .navigation-list {
   list-style: none;
   margin-top: 0;

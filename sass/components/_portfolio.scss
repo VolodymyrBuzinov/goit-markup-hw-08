@@ -122,6 +122,10 @@
     &:nth-child(odd) {
       margin-right: 30px;
     }
+    &:nth-last-child(1) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
   @media screen and (min-width: 1200px) {
     max-width: 370px;

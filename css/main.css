@@ -1,5 +1,4 @@
 .header {
-  overflow: hidden;
   position: relative;
 }
 
@@ -153,7 +152,7 @@
   .navigation-container {
     position: absolute;
     top: 14%;
-    left: 0;
+    left: -9999999px;
     padding-top: 60px;
     padding-bottom: 60px;
     display: -webkit-box;
@@ -181,6 +180,7 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .navigation-container.is-open {
+    left: 0;
     -webkit-transform: translatex(0);
             transform: translatex(0);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -188,6 +188,11 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.cont-port {
+  top: 100%;
+  border-top: hidden;
 }
 
 .navigation-list {
@@ -2033,6 +2038,10 @@
   }
   .projects-card:nth-child(odd) {
     margin-right: 30px;
+  }
+  .projects-card:nth-last-child(1) {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
